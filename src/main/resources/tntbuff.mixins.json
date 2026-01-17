@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.JohnCornflakes.tntbuff.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TNTMixin",
+    "TNTMinecartMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

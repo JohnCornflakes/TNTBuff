@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "tntbuff",
+  "version": "${version}",
+  "name": "TNTBuff",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/tntbuff/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "me.JohnCornflakes.tntbuff.client.TntbuffDataGenerator"
+    ],
+    "client": [
+      "me.JohnCornflakes.tntbuff.client.TntbuffClient"
+    ],
+    "main": [
+      "me.JohnCornflakes.tntbuff.Tntbuff"
+    ]
+  },
+  "mixins": [
+    "tntbuff.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
