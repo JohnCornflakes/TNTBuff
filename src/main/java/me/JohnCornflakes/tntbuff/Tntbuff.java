@@ -15,6 +15,7 @@ public class Tntbuff implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LOGGER.info("TNTBuff initializing");
         CONFIG = ModConfig.load();
     }
 }
