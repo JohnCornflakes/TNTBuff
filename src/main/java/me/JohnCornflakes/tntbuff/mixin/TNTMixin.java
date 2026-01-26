@@ -39,7 +39,6 @@ abstract class TNTMixin extends Entity implements Ownable {
 
     @Overwrite
     private void explode() {
-        Tntbuff.LOGGER.info("Hello world");
 //        float f = 4.0F;
         float pow = 4.0F;
         pow *= Tntbuff.CONFIG.TNTMultiplier;
