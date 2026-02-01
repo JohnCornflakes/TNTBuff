@@ -47,7 +47,7 @@ abstract class TNTMinecartMixin extends AbstractMinecartEntity {
 
     @Overwrite
     public void explode(@Nullable DamageSource damageSource, double power) {
-        if (!this.getEntityWorld().isClient) {
+        if (!this.getEntityWorld().isClient()) {
             double d = Math.sqrt(power);
             if (d > (double)5.0F) {
                 d = (double)5.0F;
