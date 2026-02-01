@@ -47,7 +47,7 @@ abstract class TNTMinecartMixin extends AbstractMinecartEntity {
 
     @Overwrite
     public void explode(@Nullable DamageSource damageSource, double power) {
-        if (!this.getWorld().isClient) {
+        if (!this.getEntityWorld().isClient) {
             double d = Math.sqrt(power);
             if (d > (double)5.0F) {
                 d = (double)5.0F;
@@ -58,7 +58,7 @@ abstract class TNTMinecartMixin extends AbstractMinecartEntity {
 
 
 
-            this.getWorld().createExplosion(this, damageSource, (ExplosionBehavior)null, this.getX(), this.getY(), this.getZ(), (float)(pow + this.random.nextDouble() * (double)1.5F * d), false, World.ExplosionSourceType.TNT);
+            this.getEntityWorld().createExplosion(this, damageSource, (ExplosionBehavior)null, this.getX(), this.getY(), this.getZ(), (float)(pow + this.random.nextDouble() * (double)1.5F * d), false, World.ExplosionSourceType.TNT);
 //            this.getWorld().createExplosion(this, damageSource, (ExplosionBehavior)null, this.getX(), this.getY(), this.getZ(), (20.0F), false, World.ExplosionSourceType.TNT);
             this.discard();
         }

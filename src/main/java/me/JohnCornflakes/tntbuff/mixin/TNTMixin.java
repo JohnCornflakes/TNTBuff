@@ -43,7 +43,7 @@ abstract class TNTMixin extends Entity implements Ownable {
         float pow = 4.0F;
         pow *= Tntbuff.CONFIG.TNTMultiplier;
 //        this.getWorld().createExplosion(this, Explosion.createDamageSource(this.getWorld(), this), this.teleported ? TELEPORTED_EXPLOSION_BEHAVIOR : null, this.getX(), this.getBodyY((double)0.0625F), this.getZ(), pow, false, World.ExplosionSourceType.TNT);
-        this.getWorld().createExplosion(this, Explosion.createDamageSource(this.getWorld(), this), this.teleported ? TELEPORTED_EXPLOSION_BEHAVIOR : null, this.getX(), this.getBodyY((double)0.0625F), this.getZ(), pow, false, World.ExplosionSourceType.TNT);
+        this.getEntityWorld().createExplosion(this, Explosion.createDamageSource(this.getWorld(), this), this.teleported ? TELEPORTED_EXPLOSION_BEHAVIOR : null, this.getX(), this.getBodyY((double)0.0625F), this.getZ(), pow, false, World.ExplosionSourceType.TNT);
     }
 
 }
